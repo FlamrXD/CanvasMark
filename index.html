@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanvasMark</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1>CanvasMark</h2>
+            <p>Made by <a href="https://flamr.pages.dev" target="_blank" style="color: #E0E0E0 !important;">FlamrXD</a></p>
+            <h2>Upload Base Image</h2>
+            <div class="file-upload">
+                <label for="uploadimg" class="custom-button">Upload</label>
+                <input type="file" id="uploadimg" name="avatar" accept="image/png, image/jpeg" />
+            </div>
+            <h2>Image Watermark Settings</h2>
+            <div class="file-upload">
+                <label for="uploadWM" class="custom-button">Upload Watermark</label>
+                <input type="file" id="uploadWM" accept="image/png, image/jpeg">
+            </div>
+
+            <p>Watermark Size</p>
+            <input type="range" min="20" max="500" value="100" class="slider" id="wmsize">
+            <p>Alignment</p>
+            <!-- Horizontal alignment for image -->
+             <p>X</p>
+            <button class="img-hbtn" data-align="left">Left</button>
+            <button class="img-hbtn" data-align="center">Center</button>
+            <button class="img-hbtn" data-align="right">Right</button>
+            <p>Y</p>
+            <!-- Vertical alignment for image -->
+            <button class="img-vbtn" data-align="top">Top</button>
+            <button class="img-vbtn" data-align="middle">Center</button>
+            <button class="img-vbtn" data-align="bottom">Bottom</button>
+            <p>----------</p>
+            <h2>Text Watermark Settings</h2>
+            <form>
+                <p>text</p>
+                <input type="text" id="cool1">
+                <p>Upload Font</p>
+                <label for="uploadFont" class="custom-button">Upload</label>
+                <input type="file" id="uploadFont" accept=".ttf,.otf,.woff,.woff2">
+                <p>Font Size</p>
+                <input type="range" min="20" max="200" value="50" class="slider" id="fontsize">
+                <p>X</p>
+                <button class="hbtn" data-align="left">Left</button>
+                <button class="hbtn" data-align="center">Center</button>
+                <button class="hbtn" data-align="right">Right</button>
+                <p>Y</p>
+                <button class="vbtn" data-align="top">Top</button>
+                <button class="vbtn" data-align="middle">Center</button> <!-- maps to canvas "middle" -->
+                <button class="vbtn" data-align="bottom">Bottom</button>
+            </form>
+    </div>
+
+    <div class="main">
+        <canvas id="image"></canvas>
+    </div>
+
+    <script src="js/canvasstuff.js">
+    </script>
+</body>
+
+</html>

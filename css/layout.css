@@ -1,0 +1,119 @@
+/* Material Design Dark Palette */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --material-bg: #121212;        /* Main background */
+  --material-surface: #1E1E1E;   /* Panels, canvas */
+  --material-text: #E0E0E0;      /* Light text */
+  --material-primary: #6200EE;   /* Primary accent */
+  --material-secondary: #03DAC6; /* Secondary accent */
+  --material-error: #CF6679;     /* Error / highlight */
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Google Sans Code", monospace;
+  display: flex;
+  height: 100vh;
+  background-color: var(--material-bg);
+  color: var(--material-text);
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+h2{
+  text-align: center;
+  font-size: 20px;
+  color: var(--material-error);
+}
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: var(--material-surface);
+  color: var(--material-text);
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto; /* Or overflow: auto; */
+
+}
+
+/* Main area */
+.main {
+  flex: 1;
+  background-color: var(--material-bg);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Canvas */
+#image {
+  background-color: var(--material-bge);
+  width: 100%;
+  height: 100%;
+}
+
+/* Inputs and labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--material-text);
+}
+
+input[type="file"] {
+  background-color: var(--material-primary);
+  color: var(--material-text);
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--material-primary);
+  color: var(--material-text);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--material-secondary);
+}
+/* Hide the original file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the custom button */
+.custom-button {
+  background-color: var(--material-primary); /* or any color */
+  color: var(--material-text);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.custom-button:hover {
+  background-color: var(--material-secondary); /* hover effect */
+}
+
+button {
+  background-color: var(--material-primary) !important;
+  color: var(--material-text);
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: var(--material-secondary);
+}
